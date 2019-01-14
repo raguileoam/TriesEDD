@@ -1,14 +1,15 @@
+package Trie;
+
 import java.util.HashMap;
 
 public class TrieNode {
-    private TrieNode parent;
-    private boolean isWord;
-    private String text;
-    private HashMap<Character,TrieNode> children;
+    private TrieNode parent; //Nodo padre
+    private boolean isWord; //Si es la ultima letra de alguna palabra
+    private HashMap<Character,TrieNode> children; //Nodos hijos
 
     @Override
     public String toString() {
-        return "TrieNode{" +
+        return "Trie.TrieNode{" +
                 "parent=" + parent +
                 ", isWord=" + isWord +
                 ", children=" + children.keySet() +
@@ -27,10 +28,6 @@ public class TrieNode {
 
     public boolean isWord() {
         return isWord;
-    }
-
-    public String getText() {
-        return text;
     }
 
     public HashMap<Character, TrieNode> getChildren() {
